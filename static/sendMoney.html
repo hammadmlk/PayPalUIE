@@ -1,0 +1,86 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/functions.js"></script>
+<script src="js/sendMoney.js"></script>
+</head>
+
+<body>
+    <div id="sendMoneyPage">
+        <header>
+            <h1>Send Money</h1>
+        </header>
+        
+        <main>
+            <form id= "sendMoneyForm" class="sendMoneyForm" action="/send_payment_api" method="POST" name="sendMoneyForm">
+                <ul>
+                    <li>
+                        <label for="toField">To:</label>
+                        <input type="email" placeholder="Email Address" id="toField" name="to" tabindex="1"/>
+                    </li>
+                    <li class="w30">                    
+                        <label for="currencyField">Currency:</label>
+                        <select name="currency" id="currencyField" tabindex="3">
+                          <!--option value="USD">USD</option-->
+                        </select>
+                    </li>
+                    <li class="w70">
+                        <label for="amountField">Amount:</label>
+                        <input type="text" placeholder="Amount" id="amountField" name="amount" tabindex="2"/>
+                    </li>                
+                    <li>
+                        <label for="messageField">Message (Optional):</label>
+                        <textarea placeholder="Message..." id="messageField" name="message" tabindex="4"></textarea>
+                    </li>
+                    <li>
+                        <fieldset value="" class = "radiox">
+                            <legend value="">What is the payment for?</legend>
+                            
+                            <input id="familyfriends" type="radio" name="paymentType" value="ff" checked>  
+                            <label for="familyfriends">I'm Sending Money to family or friends</label>  
+                            
+                            <input id="goodservice" type="radio" name="paymentType" value="gs">  
+                            <label for="goodservice">I'm paying for goods or services</label>                        
+                            
+                        </fieldset>
+                    </li>
+                </ul>
+            </form>
+        </main>
+        
+        <footer>
+            <div class="width50 middleX">
+                <button id="clearBtn">Clear</button>
+            </div>
+            <div class="width50 middleX">
+                <button id="nextBtn">Next</button>
+            </div>
+        </footer>
+    </div>
+    
+    <div id="successPage">
+        <header>
+            <h1>Send Money</h1>
+        </header>
+        
+        <main>
+            <div class="middleX middleY">
+            <p>You have sent <span id="success_amount">xxx</span> to <span id="success_name">Name</span></p>
+            <img src="img/tick-hi.png" width="60"></img>
+            </div>
+        </main>
+        
+        <footer>
+            <!--Did not add send money and transaction buttons coz 
+                it very badly violates UI heuristics :p-->
+            <div class="middleX">
+                <button id = "homeBtn">Home</button>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <div class="overlay" id="loading"></div>
+
+<!--   ===  -->
+</body>

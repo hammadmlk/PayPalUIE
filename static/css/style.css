@@ -1,0 +1,405 @@
+
+/*
+NOTE:
+ Adding a 'x' before a style elem name is my way of commenting out a CSS line
+   
+   Example:
+    position:relative  
+    xposition:relative   // my quick comment out / disable
+    
+ 
+ This css needs more work like remove unused css.
+ 
+*/
+
+
+body, input, textarea, select {
+  font-family: "Roboto", "Droid Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: #fff;
+  margin:0;
+}
+
+main {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    xposition:relative;
+    
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+}
+
+button{
+
+    font-size: 1em;
+    font-weight: bold;
+    height: 2.5em;
+    margin: .25em;
+    
+    width: 80%;
+    min-width: 7em;
+    
+    background: #eee;
+    border-color: #ddd;
+    color: #777;
+    border-width: 1px 0;
+    border-style: solid;
+    border-radius: 1em;
+    outline:none;
+}
+
+button:active{
+    background-color:#ddd;
+    border-color: #bbb;
+}
+
+.addSendMoneyIcon{
+    background-image: url(../img/sendmoney.png);
+    background-position: center left 10px;
+    background-repeat: no-repeat;
+}
+
+.addTransactionHistoryIcon{
+    background-image: url(../img/transHist.png);
+    background-position: center left 10px;
+    background-repeat: no-repeat;
+}
+
+.middleY {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto; 
+    width: /*whatever width you want*/;
+}
+
+
+/* sendMoneyForm*/
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.sendMoneyForm ul {
+    margin-bottom: 1em;
+    
+    list-style-type: none;
+    -webkit-padding-start: 0px;
+}
+ 
+.sendMoneyForm li {
+    border: 1px solid #ccc; 
+    border-bottom: 0;
+    margin-bottom: 0px; 
+    position: relative; 
+}
+ 
+.sendMoneyForm li:first-child {
+    border-top: 0;
+}
+ 
+.sendMoneyForm li:last-child {
+    border-bottom: 1px solid #ccc;
+}
+
+.sendMoneyForm legend{
+    font-size:1em;
+    font-weight: normal;
+    text-align:left;
+    
+    display: block; 
+    border: 0;
+    
+    width: 100%; 
+    height: 100%; 
+    padding: 1em 0em 0em; 
+    outline: 0;
+}
+
+.sendMoneyForm .w70{
+    width: 70%;
+    display: block;
+    xfloat:left;
+}
+.sendMoneyForm .w30{
+    width: 30%;
+    display: block;
+    float:right;
+    border-left:0;
+}
+
+label, input, textarea, select {
+    display: block; 
+    border: 0;
+}
+ 
+input, textarea, select{ 
+    width: 100%; 
+    height: 100%; 
+    padding: 2.25em 1em 1em; 
+    outline: 0;
+}
+ 
+textarea {
+    height: 8em;
+    resize: none; 
+}
+
+select {
+    background:transparent;
+}
+
+label {
+    font-size: .8125em; /* 13/16 */
+    position: absolute; 
+    top: 1.23em;
+    left: 1.23em;
+    color: #f1773b;
+    opacity: 1;
+}
+
+input[type="submit"] {
+    background: #f1773b;
+    margin-bottom: 1em;
+    color: white;
+    border-radius: 3px;
+    padding: .75em;
+    -webkit-appearance: none; /* remove default browser <button> styling */
+    -webkit-transition: .333s ease -webkit-transform;
+    transition: .333s ease transform;
+}
+input[type="submit"]:hover {
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+input[type="submit"]:active {
+    -webkit-transform: scale(.975);
+    transform: scale(.975);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+     margin: 0; 
+}
+
+
+.addtick{
+    background-image: url(../img/tick.png);
+    background-position: center right 1em;
+    background-repeat: no-repeat;
+}
+
+.addcross{
+    background-image: url(../img/cross.png);
+    background-position: center right 1em;
+    background-repeat: no-repeat;
+    border: 0.1em solid red;
+}
+
+fieldset {
+    padding: 1em;
+    margin: 0 0 0 0;
+    border: 0;
+}
+
+/*Radio*/
+
+
+.radiox fieldset{
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.radiox label {    
+    background-color: #ddd;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    height: 3em;
+    
+    cursor: pointer;
+    position: relative;
+    left:0;
+    
+    
+    display: table-cell;
+    vertical-align: middle;
+    width: 999em;
+    
+    top: 0;
+    font-size: 1em;
+    color: #555;
+    font-weight: bold;
+    padding-left: 1em;
+    
+}
+    
+}
+
+.radiox input[type=radio]{
+	display: none;
+}
+.radiox label:before {
+	content: "";
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 10px;
+	position: absolute;
+	right: 0;
+	xbottom: 1px;
+	background-color: #aaa;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    
+    border-radius: 8px;
+}
+
+.radiox input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #7BFF24;
+    font-size: 3em;
+    text-align: center;
+    line-height: 18px;
+}
+
+/*end radio*/
+  
+/*END sendMoneyForm*/
+
+/*HEADER*/
+header {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    height:3em;
+    
+    background: #eee;
+    border-color: #ddd;
+    color: #333;
+    border-width: 1px 0;
+    border-style: solid;
+}
+
+header h1{
+    margin:1em;
+    font-size: 1em;
+    text-align: center;
+}
+
+/*END HEADER*/
+
+/*FOOTER*/
+footer {
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:999;
+    height:3em;
+    
+    background: #eee;
+    border-color: #ddd;
+    color: #333;
+    border-width: 1px 0;
+    border-style: solid;
+}
+
+footer h1{
+    margin:1em;
+    font-size: 1em;
+    text-align: center;
+}
+
+footer button{
+    font-size: 1em;
+    height: 2.5em;
+    margin: .25em;
+    width: 80%;
+    max-width: 10em;
+}
+
+/*END FOOTER*/
+
+/*MISC*/
+.width50{
+    width:49%;
+    display:inline-block;
+}
+
+.middleX{
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overlay{
+    height:100%;
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1000 !important;
+    background-color:white;
+    opacity: 0.75;
+    background-image:url(../img/ajax-loader.gif);
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+    display:none;
+    
+}
+
+/*END MISC*/
+
+/*Trans Table*/
+
+.transTab{
+    width:100%;
+    text-align:center;
+}
+
+.transTab tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.transTab td{
+    width:33.3%;
+    xheight:3em;
+    height: 45px;
+}
+
+/*End Trans Table*/
+
+/*Small Screen*/
+@media all and (max-width: 400px) {
+
+    body, input, textarea, select {
+      font-family: "Roboto", "Droid Sans", sans-serif;
+      font-size: 13px;
+      
+    }
+
+    .radiox label{
+        font-size:0.75em;
+    }
+}
+
+#successPage{
+    display:none;
+}
