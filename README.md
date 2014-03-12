@@ -16,4 +16,21 @@ Go to the folder where you want to put the app
 > node index.js
 for debuging use supervisor index.js (supervisor module required)
 
-//see online at: http://moodrhythm.com:8888/ (server may be offline.) 
+** see it online at: http://moodrhythm.com:8888/ (server may be offline.) **
+
+
+### HomePage Snapshot
+
+![HomeSnap HomePage](https://raw.github.com/hammadmlk/PayPalUIE/master/snapshots/home.png)
+
+
+### SendMoney Page Snapshot
+
+![SendMoneySnap SendMoneyPage](https://raw.github.com/hammadmlk/PayPalUIE/master/snapshots/sendMoney.png)
+
+
+### Transaction History Page Snapshot
+
+![TransactionsSnap TransactionsPage](https://raw.github.com/hammadmlk/PayPalUIE/master/snapshots/transactions.png)
+
+
