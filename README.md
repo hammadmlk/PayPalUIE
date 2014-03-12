@@ -6,14 +6,14 @@ This work is for a UIE exercise from PayPal Engineering @ SanJose. This was some
 ###Install Instruction:
 ####Setup (asuming nodejs installed)
 Go to the folder where you want to put the app
-> git clone https://github.com/hammadmlk/PayPayUIE.git
+> git clone https://github.com/hammadmlk/PayPalUIE.git
 
 > cd PayPalUIE
 
-> npm install
+> npm install formidable
 
 ####Running
-> node app.js
-for debuging use supervisor app.js (supervisor module required)
+> node index.js
+for debuging use supervisor index.js (supervisor module required)
 
-//see online at: coming soon
+//see online at: http://moodrhythm.com:8888/ (server may be offline.) 
