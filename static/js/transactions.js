@@ -29,6 +29,9 @@ function scroll () {
     var heightofRow = 45; //pixels
     var RowNumOnTop = Math.floor(window.pageYOffset/heightofRow);
 
+    //NumOfRows on Page
+    var RowsOnPage = Math.floor(window.innerHeight/heightofRow);
+    
     //scroll up or down 
     var scrollUp, scrollDown;
     if (window.PrevRowNumOnTop>RowNumOnTop){
@@ -44,10 +47,10 @@ function scroll () {
         scrollDown = false;
     }
       
-    console.log('row num on top',RowNumOnTop);
+    //console.log('row num on top',RowNumOnTop, 'rows on page: ', RowsOnPage);
     
     //need to get more data
-    if(scrollDown && RowNumOnTop+10>maxRows){
+    if(scrollDown && RowNumOnTop+RowsOnPage+10>maxRows){
         getNextOlder20Transactions(window.latest_trans_ID - maxRows+1)
     }
     //refresh/load latest data
