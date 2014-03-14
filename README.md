@@ -2,7 +2,7 @@
 
 This work is for a UIE exercise from PayPal Engineering @ SanJose. This was some fun work!
 
-##Server (node.js running socket.io):
+##Server:
 ###Install Instruction:
 ####Setup (asuming nodejs installed)
 Go to the folder where you want to put the app
@@ -14,6 +14,7 @@ Go to the folder where you want to put the app
 
 ####Running
 > node index.js
+
 for debuging use supervisor index.js (supervisor module required)
 
 ** see it online at: http://moodrhythm.com:8888/ (server may be offline.) **
