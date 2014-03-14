@@ -4,7 +4,7 @@ window.latest_trans_ID
 maxRows = 0;
 var loaderObj;
 var transactionArray=[];
-
+var lock=0;
   
 window.onload=function(){
     
@@ -48,13 +48,14 @@ function scroll () {
     }
       
     //console.log('row num on top',RowNumOnTop, 'rows on page: ', RowsOnPage);
-    
+
     //need to get more data
-    if(scrollDown && RowNumOnTop+RowsOnPage+10>maxRows){
+    if(scrollDown && RowNumOnTop+RowsOnPage+10>maxRows && lock<=0){
+        lock++;
         getNextOlder20Transactions(window.latest_trans_ID - maxRows+1)
     }
     //refresh/load latest data
-    if(scrollUp && RowNumOnTop===0 && window.pageYOffset){
+    if(scrollUp && RowNumOnTop===0 ){
         get_latest_transactions()
     }
     //all set for caching
@@ -74,7 +75,7 @@ function getNextOlder20Transactions(prevLastId){
         }
         if (xmlhttp.readyState==4 && xmlhttp.status==200){
             //success
-            
+            lock--;
             ans = xmlhttp.responseText;
             ans = JSON.parse(ans);
             
@@ -88,6 +89,7 @@ function getNextOlder20Transactions(prevLastId){
         }
         else if (xmlhttp.readyState==4){
             //fail
+            lock--;
             alert('Ops!! Problem contacting the server. Try again maybe?')
             console.log('error 004x');
             loaderObj.style.display = 'none';
